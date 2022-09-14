@@ -1,9 +1,7 @@
-import Calculator from './Component/newCalculator';
+import Navbar from './Component/Navbar';
 
 function App() {
-  return (
-    <Calculator />
-  );
+  return <Navbar />;
 }
 
 export default App;

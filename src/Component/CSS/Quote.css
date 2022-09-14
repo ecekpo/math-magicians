@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.quote {
+  margin-top: 20%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: maroon;
+  font-weight: 500;
+}
+
+.quote p {
+  font-size: 30px;
+  font-weight: 800;
+  padding: 10px;
+  color: maroon;
+  word-wrap: break-word;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  padding: 10px;
+  color: maroon;
+}

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-header {
+  display: flex;
+  font-size: large;
+  font-weight: 500;
+  align-items: baseline;
+  justify-content: space-around;
+  background-color: #fff;
+  height: 80px;
+}
+
+.nav-header h1 {
+  align-self: baseline;
+  color: maroon;
+  margin-top: 2%;
+}
+
+.nav-link {
+  text-decoration: none;
+  background-color: #fff;
+  margin-left: 25%;
+  color: maroon;
+  font-size: larger;
+}
+
+.nav-link:focus {
+  color: pink;
+  text-decoration: dotted;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .nav-header {
+    width: fit-content;
+  }
+}
