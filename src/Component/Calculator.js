@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Calculator.css';
 import calculate from '../Logic/calculate';
+import List from './List';
+import Footer from './Footer';
 
 class Calculator extends Component {
   constructor(props) {
@@ -15,132 +17,157 @@ class Calculator extends Component {
   Calculate = (e) => {
     const ans = calculate(this.state, e.target.innerText);
     this.setState(ans);
-  }
+  };
 
   render() {
     const { total, next, operation } = this.state;
     return (
-      <div className="Calculator">
-        <header className="head">
-          <span className="initial-zero">{next || operation || total}</span>
-        </header>
-        <div className="wrap">
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
+      <>
+        <List />
+        <div className="text-math">Let us do some math</div>
+        <div className="Calculator">
+          <header className="head">
+            <span className="initial-zero">{next || operation || total}</span>
+          </header>
+          <div className="wrap">
             {' '}
-            AC
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              AC
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              +/-
+              {' '}
+            </button>
             {' '}
-            +/-
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              %
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
+            <button
+              type="button"
+              onClick={this.Calculate}
+              className="calc active"
+            >
+              {' '}
+              <span>&#247;</span>
+              {' '}
+            </button>
             {' '}
-            %
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              7
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc active">
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              8
+              {' '}
+            </button>
             {' '}
-            <span>&#247;</span>
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              9
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
+            <button
+              type="button"
+              onClick={this.Calculate}
+              className="calc active"
+            >
+              {' '}
+              x
+              {' '}
+            </button>
             {' '}
-            7
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              4
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              5
+              {' '}
+            </button>
             {' '}
-            8
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              6
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
+            <button
+              type="button"
+              onClick={this.Calculate}
+              className="calc active"
+            >
+              {' '}
+              -
+              {' '}
+            </button>
             {' '}
-            9
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              1
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc active">
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              2
+              {' '}
+            </button>
             {' '}
-            x
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              3
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
+            <button
+              type="button"
+              onClick={this.Calculate}
+              className="calc active"
+            >
+              {' '}
+              +
+              {' '}
+            </button>
             {' '}
-            4
+            <button type="button" onClick={this.Calculate} className="zero">
+              {' '}
+              0
+              {' '}
+            </button>
             {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
+            <button type="button" onClick={this.Calculate} className="calc">
+              {' '}
+              .
+              {' '}
+            </button>
             {' '}
-            5
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
-            {' '}
-            6
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc active">
-            {' '}
-            -
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
-            {' '}
-            1
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
-            {' '}
-            2
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
-            {' '}
-            3
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc active">
-            {' '}
-            +
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="zero">
-            {' '}
-            0
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc">
-            {' '}
-            .
-            {' '}
-          </button>
-          {' '}
-          <button type="button" onClick={this.Calculate} className="calc active">
-            {' '}
-            =
-            {' '}
-          </button>
+            <button
+              type="button"
+              onClick={this.Calculate}
+              className="calc active"
+            >
+              {' '}
+              =
+              {' '}
+            </button>
+          </div>
         </div>
-      </div>
+        <Footer />
+      </>
     );
   }
 }

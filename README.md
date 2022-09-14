@@ -20,7 +20,7 @@ Run the following commands to clone and run it.
 
 ### To clone the repository
 
-  `git clone git@github.com:ecekpo/math_magician_setup.git`
+  `git clone git@github.com/ecekpo/math-magicians.git`
 
 ### To enter Directory
 

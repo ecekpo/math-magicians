@@ -10,7 +10,7 @@ function List() {
         <div className="nav-conatiner">
           <NavLink className="nav-link" to="/">Home</NavLink>
           <NavLink className="nav-link" to="/calculator">Calculator</NavLink>
-          <NavLink className="nav-link" to="/quotes">Quote</NavLink>
+          <NavLink className="nav-link" to="/quote">Quote</NavLink>
         </div>
       </nav>
     </header>
